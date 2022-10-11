@@ -47,4 +47,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TASKEFFORT_6C221 }}'
           channelId: ${{ github.event.inputs.firebase-channel || 'live' }}
-          projectId: task-effort
+          projectId: taskeffort-6c221
