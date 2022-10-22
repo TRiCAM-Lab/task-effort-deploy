@@ -91,7 +91,7 @@ const onlineTimeline = MTURK
       buildCountdown(lang.countdown.expt1, 3),
       taskBlock(exptBlock1),
       showPayment(5000, exptBlock1),
-      buildCountdown(lang.countdown.redirect_to_prolific, 5),
+      buildCountdown(lang.countdown.redirect_to_next_step, 5),
       redirectToLATISRouter(3),
     ];
 
