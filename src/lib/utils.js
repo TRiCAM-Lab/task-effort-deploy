@@ -98,12 +98,15 @@ const getProlificId = (data) => {
   }
 
   const prolificId = getQueryVariable("PROLIFIC_PID");
+  var runId = getQueryVariable("run_id");
+  runId = `${runId}`
   // const sessionId = getQueryVariable("SESSION_ID");
   // const studyId = getQueryVariable("STUDY_ID");
 
   console.log(prolificId);
   const uniqueId = `${prolificId}`;
   console.log(uniqueId);
+  jsPsych.data.addProperties({ runId: runId, timestamp: Date.now() })
   jsPsych.data.addProperties({ uniqueId: uniqueId, timestamp: Date.now() });
 };
 
