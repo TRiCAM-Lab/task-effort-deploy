@@ -44,6 +44,12 @@ const addToFirebase = (data) => {
     .set(data)
 };
 
+const addEarningsToFirebase = (data) => {
+  db.collection(collectionName)
+    .doc(data.uniqueId)
+    .update({ totalEarnings: data.total_earnings });
+}
+
 // Export types that exists in Firestore
 // This is not always necessary, but it's used in other examples
 const { TimeStamp, GeoPoint } = firebase.firestore;
@@ -53,6 +59,7 @@ export {
   GeoPoint,
   createFirebaseDocument,
   addToFirebase,
+  addEarningsToFirebase,
   createFirebaseDocumentRandom,
 };
 
