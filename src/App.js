@@ -13,7 +13,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "@fortawesome/fontawesome-free/css/all.css";
 import { getTurkUniqueId, sleep } from "./lib/utils";
-import { addToFirebase, createFirebaseDocument } from "./firebase.js";
+import { addEarningsToFirebase, addToFirebase, createFirebaseDocument } from "./firebase.js";
 require("dotenv").config();
 
 let ipcRenderer = false;
@@ -70,6 +70,7 @@ class App extends React.Component {
                 };
                 completePsiturk();
               } else {
+                addEarningsToFirebase(data);
                 // jsPsych.data.get().localSave("csv", "task-effort.csv");
               }
             },
