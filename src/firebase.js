@@ -21,6 +21,7 @@ const db = firebase.initializeApp(config).firestore();
 const createFirebaseDocument = (uniqueId) => {
   db.collection(collectionName).doc(uniqueId).set({
     uniqueId,
+    totalEarnings: 0,
     dateCreated: new Date(),
   }); 
 };
