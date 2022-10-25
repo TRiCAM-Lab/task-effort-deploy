@@ -49,6 +49,7 @@ class App extends React.Component {
                   addToFirebase(data);
                 }
                 if (data.trial_index > 1) {
+                  addEarningsToFirebase(data);
                   addToFirebase(data);
                 }
               }
@@ -70,7 +71,6 @@ class App extends React.Component {
                 };
                 completePsiturk();
               } else {
-                addEarningsToFirebase(data);
                 // jsPsych.data.get().localSave("csv", "task-effort.csv");
               }
             },
