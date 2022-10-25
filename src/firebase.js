@@ -46,9 +46,12 @@ const addToFirebase = (data) => {
 };
 
 const addEarningsToFirebase = (data) => {
-  db.collection(collectionName)
-    .doc(data.uniqueId)
-    .update({ totalEarnings: data.total_earnings });
+  const totalEarnings = data.total_earnings;
+  if (typeof totalEarnings !== 'undefined'){
+    db.collection(collectionName)
+      .doc(data.uniqueId)
+      .update({ totalEarnings: totalEarnings });
+  }
 }
 
 // Export types that exists in Firestore
