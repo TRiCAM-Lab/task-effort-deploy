@@ -46,6 +46,7 @@ const addToFirebase = (data) => {
 };
 
 const addEarningsToFirebase = (data) => {
+  console.log("HFHFHFHFHFHFHHFHFHFFHFHFHFFH")
   db.collection(collectionName)
     .doc(data.uniqueId)
     .update({ totalEarnings: 10}); // data.total_earnings });
